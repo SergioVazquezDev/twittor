@@ -8,7 +8,7 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 
 // Declaramos nuestro AppShell (todo lo necesario para mi aplicación)
 const APP_SHELL = [
-    // '/',
+    // '/', // esto va a servir en desarrollo, pero no en PROD
     'index.html',
     'css/style.css',
     'img/favicon.ico',

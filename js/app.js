@@ -1,14 +1,14 @@
 // LOGICA DE LA APP. Está con JQuery, pero podemos usar Angular u otro framework
 
-var url = window.location.href;
-var swLocation = '/twittor/sw.js';
+var url = window.location.href; // Con esto obtenemos todo el url
+var swLocation = '/twittor/sw.js'; // Como lo vamos a desplegar en GitHubPages, no es el raid sino /twittor/
 
 // Si existe SW, lo registramos
 if ( navigator.serviceWorker ) {
-    if ( url.includes('localhost') ) {
-        swLocation = '/sw.js';
+    if ( url.includes('localhost') ) { // si es localhost estoy en desarrollo
+        swLocation = '/sw.js';  // desde el raiz
     }
-    navigator.serviceWorker.register( swLocation );
+    navigator.serviceWorker.register( swLocation ); // si no, estoy en PROD: desde /twittor/
 }
 
 
