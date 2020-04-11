@@ -2,8 +2,8 @@
 importScripts('js/sw-utils.js'); // importamos sw-utils.js (appShell)
 
 // Declaramos las constantes para el manejo de cache
-const STATIC_CACHE    = 'static-v4';
-const DYNAMIC_CACHE   = 'dynamic-v2';
+const STATIC_CACHE    = 'static-v5';
+const DYNAMIC_CACHE   = 'dynamic-v3';
 const INMUTABLE_CACHE = 'inmutable-v1';
 
 // Declaramos nuestro AppShell (todo lo necesario para mi aplicación)

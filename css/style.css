@@ -12,8 +12,9 @@
     background-color: #dde1e2; 
     width: 100%;
 
-
+    /* Ajuste para android (quitar pull to refresh) */
     overscroll-behavior-y: contain;
+    /* Ajustes para ios*/
     -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
