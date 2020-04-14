@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <!-- Eliminar en Notch en los Iphones -> height=device-height, viewport-fit=cover -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,17 +10,19 @@
     <!-- Fuentes de google -->
     <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
-    
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 
     <!-- Estilos -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <!-- para el toast de online / offline -->
+    <link rel="stylesheet" href="js/libs/plugins/mdtoast.min.css">
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
 
     <!-- Icono -->
     <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
-
+   
     <!-- Referencia al manifest (quitamos / de /manifest para el despliegue en github)-->
     <link rel="manifest" href="manifest.json">
 
@@ -59,7 +61,7 @@
             <span id="salir-btn" class="fa fa-sign-out-alt out oculto animated fadeIn"></span>
             <span id="titulo">
                 <!-- Ponemos un icono fontawesome para que carge la libreria en la primera pantalla -->
-                <i class="fa fa-user"></i> 
+                <i class="fa fa-user"></i>
                 Seleccione Personaje
             </span>
             <span id="nuevo-btn" class="fa fa-pen-square new oculto animated fadeIn fast"></span>
@@ -75,12 +77,14 @@
                 <span id="cancel-btn" class="fa fa-times"></span>
             </span>
             
+
             <div class="nuevo-mensaje">
                 <textarea id="txtMensaje" placeholder="Nuevo mensaje..." rows="5"></textarea>
             </div>
 
             
             <!-- boton de enviar -->
+
             <div id="post-btn" class="fab">
                 <i class="fa fa-paper-plane"></i>
             </div>
@@ -100,6 +104,11 @@
         <!-- Seleccion de personaje -->
         <div id="seleccion" class="seleccion animated fadeIn fast" align="center">
         
+            <!-- Botón de notificaciones -->
+            <button class="oculto btn-noti-activadas">Notificaciones Activadas</button>
+            <button class="oculto btn-noti-desactivadas">Notificaciones Desactivadas</button>
+            <!-- Fin de boton de notificaciones -->
+
             <div>
                 <img data-user="spiderman" src="img/avatars/spiderman.jpg" alt="spiderman" class="seleccion-avatar">
             </div>
@@ -128,7 +137,7 @@
         <ul id="timeline" class="timeline oculto">
             
             <!-- Mensaje -->
-            <li class="animated fadeIn fast">
+            <!-- <li class="animated fadeIn fast">
                 <div class="avatar">
                     <img src="img/avatars/spiderman.jpg">
                 </div>
@@ -136,18 +145,23 @@
                     <div class="bubble">
                         <h3>@spiderman</h3>
                         <br/>
-                        La tía May, hizo unas galletas en forma de Ironman!
+                        La tía May, hizo unos panqueques en forma de ironman!
                     </div>
                     
                     <div class="arrow"></div>
                 </div>
-            </li>
+            </li> -->
             <!-- Fin del mensaje -->
 
         </ul>
         <!-- Fin Lista de mensajes -->
-    
-        <script src="js/libs/jquery.js"></script>
+
+
+      
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Para el toast de online / offline -->
+        <script src="js/libs/plugins/mdtoast.min.js"></script>
         <script src="js/app.js"></script>
     
 </body>

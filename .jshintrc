@@ -69,9 +69,13 @@
     "wsh"           : false,
     "yui"           : false,
     "globals"       : {
-        "$"     : true,
-        "self"  : true,
-        "caches": true,
-        "importScripts": true
+        "self"     : true,
+        "__dirname": true,
+        "caches"   : true,
+        "require"  : true,
+        "module"   : true,
+        "process"  : true,
+        "$"        : true,
+        "clients"  : true
     }
 }

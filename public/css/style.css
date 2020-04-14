@@ -12,6 +12,7 @@
     background-color: #dde1e2; 
     width: 100%;
 
+
     /* Ajuste para android (quitar pull to refresh) */
     overscroll-behavior-y: contain;
     /* Ajustes para ios*/
@@ -20,7 +21,27 @@
     -webkit-touch-callout: none;
 }
 
+
 /* Personalizados */
+button {
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  color: white;
+  font-size: 14px;
+}
+
+.btn-noti-activadas {
+  background-color: #3498db;
+}
+
+.btn-noti-desactivadas {
+  background-color: red;
+}
+
+
+
 .oculto {
   display: none !important;
 }
